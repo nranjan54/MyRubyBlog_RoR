@@ -11,6 +11,8 @@
 /log/*
 !/log/.keep
 /tmp
-Rakefile
-/config/database.yml
-/config/secrets.yml
+
+# Uncomment them while pushing to GitHub
+#Rakefile
+#/config/database.yml
+#/config/secrets.yml
