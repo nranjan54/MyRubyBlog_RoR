@@ -1,0 +1,11 @@
+Category:
+1.	Blog
+2.	Projects
+3.	Programming
+4.	About Me
+
+Post:
+1.	Title
+2.	Body
+3.	Category_id					//related with the 'id' from Category
+4.	Author_id
