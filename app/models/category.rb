@@ -1,13 +1,8 @@
-#class Post
-#	has_many :posts
-#end
-
 class Category < ActiveRecord::Base
-	#attr_accessible :name
-	has_many :posts
 	def create
 		Category.create(category_params)
 	end
+	has_many :posts
 
 	private
 
