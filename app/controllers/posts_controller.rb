@@ -13,7 +13,7 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(params[:post].permit(:title, :body, :category_id))
+		@post = Post.new(post_params)
 		if @post.save
 			redirect_to posts_path, :notice => "Your post has been saved"
 		else
@@ -39,5 +39,15 @@ class PostsController < ApplicationController
 		@post.destroy
 		redirect_to posts_path, :notice => "Your post has been deleted"
 	end
+
+	private
+		def set_post
+	      @post = Post.find(params[:id])
+	    end
+
+	    # Never trust parameters from the scary internet, only allow the white list through.
+	    def post_params
+	      params.require(:post).permit(:title, :body, :category_id)
+	    end
 
 end
