@@ -14,7 +14,7 @@
 
 # Uncomment them while pushing to GitHub
 #Rakefile
-#/config/database.yml
-#/config/secrets.yml
+/db
+/config
 myrubyblog.dump
-#myrubyblog_development.dump
+myrubyblog_development.dump
