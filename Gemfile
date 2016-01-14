@@ -17,6 +17,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use Active Admin
 gem 'activeadmin', github: 'activeadmin'
 
+# Gem Ransack for full text search instead of meta search for rails 4 https://github.com/activerecord-hackery/ransack/tree/v1.7.0
+gem 'ransack', github: 'activerecord-hackery/ransack'
+
 # Use Decive for Active_admin
 gem 'devise'
 # Use jquery as the JavaScript library
