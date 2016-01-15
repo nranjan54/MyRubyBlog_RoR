@@ -6,6 +6,8 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
+		@user = AdminUser.all
+		@comment = Comment.new(:post => @post)
 	end
 
 	def new
@@ -48,7 +50,11 @@ class PostsController < ApplicationController
 
 	    # Never trust parameters from the scary internet, only allow the white list through.
 	    def post_params
-	      params.require(:post).permit(:title, :body, :category_id)
+	      params.require(:post).permit(:title, :body, :category_id, :admin_user_id)
+	    end
+
+	    def comment_params
+	      params.require(:comment).permit(:name, :email, :body, :post_id)
 	    end
 
 end
